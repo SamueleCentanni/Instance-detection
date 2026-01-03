@@ -51,7 +51,7 @@ The project relies on a custom dataset organized as follows:
 The solution is implemented using **OpenCV** and follows a standard feature-matching pipeline:
 
 1.  **Feature Extraction:** Detecting keypoints and computing descriptors (SIFT) for both the *Model* and the *Scene*.
-2.  **Feature Matching:** Finding correspondences between model features and scene features (e.g., using FLANN or BFMatcher).
+2.  **Feature Matching:** Finding correspondences between model features and scene features (using FLANN).
 3.  **Filtering:** Removing outliers / incorrect matches (e.g., Lowe's Ratio Test).
 4.  **Localization:** Using **Homography** (RANSAC) to project the corners of the model onto the scene to draw the bounding box.
 5.  **Clustering (Optional):** Techniques to separate multiple instances of the same book in one scene.
